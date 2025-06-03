@@ -7,6 +7,6 @@ class InputData(BaseModel):
     feature1: float
     feature2: float
 
-@app.post("/predict")  # ✅ Make sure this is @app.post
+@app.post("/predict")  
 def predict(data: InputData):
     return {"prediction": data.feature1 + data.feature2}
